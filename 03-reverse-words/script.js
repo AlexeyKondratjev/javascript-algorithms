@@ -10,6 +10,14 @@
 
 function reverseWords(str) {
     // Напишите код здесь
+    const reversedArray = [];
+    const strToArray = str.split(' ');
+
+    for (let i = strToArray.length - 1; i >= 0; i--) {
+        reversedArray.push(strToArray[i]);
+    }
+
+    return reversedArray.join(' ');
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

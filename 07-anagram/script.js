@@ -10,6 +10,21 @@
 
 function anagram(str1, str2) {
     // Напишите код здесь
+ 
+    if ((str1.length !== str2.length) || (str1.toLowerCase() === str2.toLowerCase())) {
+        return false;
+    } else {
+        str1 = str1.toLowerCase();
+        str2 = str2.toLowerCase();
+
+        for (let i = 0; i < str1.length; i++) {
+            if (str2.indexOf(str1[i]) !== -1) {
+                str2 = str2.replace(str1[i], ''); 
+            } else return false;            
+        } 
+
+        return true;
+    }
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

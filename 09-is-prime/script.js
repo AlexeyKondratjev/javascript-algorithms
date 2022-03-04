@@ -11,6 +11,17 @@
 
 function isPrime(n) {
     // Напишите код здесь
+    if (n <= 1) return false;
+
+    let dividerCount = 0;
+  
+    for (let i = 1; i <= n; i++) {
+      if (n % i === 0) {
+        dividerCount++; 
+      }
+    }
+    
+    return dividerCount === 2;  
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

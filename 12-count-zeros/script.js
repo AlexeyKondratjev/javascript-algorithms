@@ -6,8 +6,29 @@
  *
 */
 
+/* function checkMultiplicity(num, count) {
+    if (num % 10 === 0) {
+        count++;
+
+        checkMultiplicity(num / 10, count);
+    } else return;   
+}
+ */
 function countZeros(n) {
     // Напишите код здесь
+    
+    let result = 0;
+    
+    for (let i = 1; i <= n; i++) {
+        let lastCompare;
+
+        while (lastCompare !== -1) {
+            lastCompare = String(i).indexOf('0', lastCompare + 1);
+            if (lastCompare !== -1) result++;
+        }
+    } 
+
+    return result;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

@@ -7,8 +7,27 @@
  * 
 */
 
+function arrIsContainElement(arr, element) {
+    const result = arr.some((item) => {
+        return item === element;
+    });
+
+    return result;
+}
+
 function intersection(arr1, arr2) {
     // Напишите код здесь
+    const arrResult = [];
+
+    arr1.forEach((item) => {
+        if (arrIsContainElement(arr2, item)) {
+            if (!arrIsContainElement(arrResult, item)) {
+                arrResult.push(item);
+            }
+        }
+    });
+
+    return arrResult;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

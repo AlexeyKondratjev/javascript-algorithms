@@ -9,6 +9,17 @@
 
 function uniq(arr) {
     // Напишите код здесь
+    const resultArr = [];
+
+    arr.forEach((item) => {
+        const searchRes = resultArr.some((resItem) => {
+            return resItem === item;
+        });
+
+        if (!searchRes) resultArr.push(item);
+    });
+
+    return resultArr;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

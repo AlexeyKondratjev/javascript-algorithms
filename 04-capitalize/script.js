@@ -8,6 +8,22 @@
 
 function capitalize(str) {
     // Напишите код здесь
+    let strResult = '';
+    let newWordBegin = true;
+
+    for (let i = 0; i <= str.length - 1; i++) {
+        if (str[i] !== " " && newWordBegin) {
+            strResult += str[i].toUpperCase(); 
+            newWordBegin = false; 
+        } else if (str[i] === " ") {
+            strResult += str[i];
+            newWordBegin = true; 
+        } else {
+            strResult += str[i];
+        }
+    };
+
+    return strResult;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

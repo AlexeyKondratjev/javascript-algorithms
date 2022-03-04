@@ -10,6 +10,15 @@
 
 function sumOfTwo(arr, sum) {
     // Напишите код здесь
+    for (let shiftCounter = 0; shiftCounter < arr.length; shiftCounter++) {
+        for (let i = shiftCounter + 1; i < arr.length; i++) {
+            if (arr[shiftCounter] + arr[i] === sum) {
+                return true;
+            }
+        }      
+    }
+
+    return false;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

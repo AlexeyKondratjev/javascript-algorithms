@@ -15,6 +15,13 @@
 
 function palindrome(str) {
     // Напишите код здесь
+    let strReverse = '';
+
+    for (let i = str.length - 1; i >= 0; i--) {
+        strReverse += str[i];           
+    }
+
+    return str.toLowerCase() === strReverse.toLowerCase();
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
